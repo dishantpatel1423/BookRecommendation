@@ -1,0 +1,49 @@
+.popular-genres-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .popular-genres-list {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+  
+  .genre-card {
+    width: 500px; /* Adjust the width */
+    height: 400px; /* Adjust the height */
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+  }
+  
+  .genre-card:last-child {
+    margin-right: 0;
+  }
+  
+  .genre-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .genre-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-grow: 1;
+  }
+  
+  .genre-name {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff;
+  }
+  

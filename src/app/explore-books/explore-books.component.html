@@ -1,0 +1,24 @@
+<!-- explore-books.component.html -->
+<div class="search-bar">
+    <input type="text" placeholder="Search books..." [(ngModel)]="searchTerm" (input)="filterBooks()">
+</div>
+
+<div class="books-grid">
+    <div *ngFor="let item of filteredBooks.slice(0, booksToShow); let i=index" class="book-container"  (click)="viewBookDetails(item)">
+        <div class="book-details">
+            <img [src]="item.bookImage" alt="{{ item.bookTitle }}" class="book-cover">
+            <div class="book-info">
+                <h5>{{ item.bookTitle }}</h5>
+                <div class="author">Author: {{ item.bookAuthors }}</div>
+                <div class="rating">
+                    <i class="fas fa-star"></i> Avg Rating: {{ item.bookRating }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Show More button container -->
+<div class="button-container">
+    <button *ngIf="booksToShow < filteredBooks.length" (click)="showMore()" class="show-more-button">Show More</button>
+</div>

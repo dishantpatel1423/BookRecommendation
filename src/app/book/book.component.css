@@ -1,0 +1,101 @@
+body {
+    overflow: hidden; /* Prevent outer scroll */
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+  
+  .book-details-container {
+    display: flex;
+    height: calc(100vh - 9vh); /* Make sure the container takes full viewport height */
+  }
+  
+  .book-details-right-side {
+    flex: 0 0 auto;
+    background-color: #333;
+    width: 350px; /* Width of the fixed image */
+  }
+  
+  .book-details-left-side {
+    background-color: #333;
+    color: #ffffff;
+    flex-grow: 1;
+    position: relative; /* Make it relative for absolute positioning */
+    overflow-y: auto; /* Enable scrolling for book details */
+    max-height: calc(100vh - 20px); /* Adjust to fit remaining space */
+  }
+  
+  .image-info-container {
+    position: sticky;
+    margin-left: 40px;
+    margin-top: 40px;
+    top: 0;
+  }
+  
+  .book-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .book-details .book-info {
+    padding-top: 30px;
+    padding-left: 60px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .book-details .book-title {
+    font-size: 45px;
+    margin: 0 0 5px;
+  }
+  
+  .book-details .book-authors {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .book-details .book-rating {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #FFD700; /* Star color */
+  }
+  
+  .book-details .rating-stars .star {
+    display: inline-block;
+    font-size: 40px; /* Adjust star size */
+    color: #FFD700; /* Star color */
+  }
+  
+  .book-details .rating-stars .rating {
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 35px; /* Adjust star size */
+    color: #666; /* Star color */
+  }
+  
+  .book-details .rating-stars .star.filled {
+    color: #FFD700; /* Filled star color */
+  }
+  
+  .book-details .book-pages {
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #888;
+  }
+  
+  .book-details .book-desc-container {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 80px; /* Adjust as needed */
+  }
+  
+  .book-details .book-desc {
+    font-size: 25px;
+  }
+  
+  .book-details .book-genres {
+    font-size: 30px;
+  }
+  
+  /* Add any additional styles as needed */
+  

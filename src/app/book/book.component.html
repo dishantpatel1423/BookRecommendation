@@ -1,0 +1,45 @@
+<div class="book-details-container">
+  <div class="book-details-right-side" *ngIf="bookDisplayed && book">
+    <div class="image-info-container">
+      <img
+        class="book-image"
+        src="{{ book.bookImage }}"
+        alt="{{ book.bookTitle }}"
+      />
+    </div>
+  </div>
+  <div class="book-details-left-side" *ngIf="bookDisplayed && book">
+    <div class="book-details">
+      <div class="book-info">
+        <h2 class="book-title">{{ book.bookTitle }}</h2>
+        <p class="book-authors">Author: {{ book.bookAuthors }}</p>
+        <p class="book-rating">
+          <span class="rating-stars">
+            <span class="star" [ngClass]="{ filled: book.bookRating >= 1 }"
+              >&#9733;</span
+            >
+            <span class="star" [ngClass]="{ filled: book.bookRating >= 2 }"
+              >&#9733;</span
+            >
+            <span class="star" [ngClass]="{ filled: book.bookRating >= 3 }"
+              >&#9733;</span
+            >
+            <span class="star" [ngClass]="{ filled: book.bookRating >= 4 }"
+              >&#9733;</span
+            >
+            <span class="star" [ngClass]="{ filled: book.bookRating >= 5 }"
+              >&#9733;</span
+            >
+            <span class="rating">{{ book.bookRating }}</span>
+            <!-- <small class="small">{{book.ratingCount}}</small> -->
+          </span>
+        </p>
+        <p class="book-pages">Pages: {{ book.bookPages }}</p>
+      </div>
+      <div class="book-desc-container">
+        <p class="book-desc">{{ book.bookDesc }}</p>
+        <!-- <p class="book-genres">Genres: {{ book.bookGenres }}</p> -->
+      </div>
+    </div>
+  </div>
+</div>

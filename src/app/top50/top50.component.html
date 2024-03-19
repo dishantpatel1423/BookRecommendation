@@ -1,0 +1,19 @@
+
+<!-- explore-books.component.html -->
+<div class="books-grid">
+    <div *ngFor="let item of newData; let i=index" class="book-container" (click)="viewBookDetails(item)">
+        <div class="book-details">
+            <img [src]="item.bookImage" alt="{{ item.bookTitle }}" class="book-cover">
+            <div class="book-info">
+                <h6>{{ item.bookTitle }}</h6>
+                <div class="author">Author: {{ item.bookAuthors }}</div>
+                <div class="rating">
+                    <i class="fas fa-star"></i> Avg Rating: {{ item.bookRating }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Show More button container -->
+

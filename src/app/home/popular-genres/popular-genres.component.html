@@ -1,0 +1,11 @@
+<section class="popular-genres-section">
+    <div class="container">
+      <h2>Popular Genres</h2>
+      <div class="popular-genres-list">
+        <div class="genre-card" *ngFor="let genre of popularGenres">
+          <img [src]="genre.imageUrl" alt="{{ genre.name }}" class="genre-image">
+          <h3 class="genre-name">{{ genre.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,71 @@
+/* featured-books.component.css */
+.featured-books-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden; /* Hide content that overflows the container */
+  }
+  
+  .featured-books-list {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    margin-right: -20px;
+  }
+  
+  .scroll-container {
+    display: inline-flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    -ms-overflow-style: none;
+    max-height: 550px; /* Set a specific max height for the container */
+  }
+  
+  .book-card {
+    width: 300px;
+    height: 100%; /* Use 100% height to fill the container */
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+  }
+  
+  .book-card:last-child {
+    margin-right: 0;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-grow: 1;
+  }
+  
+  .book-info {
+    margin-top: 10px;
+  }
+  
+  .book-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .author,
+  .rating {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  

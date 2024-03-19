@@ -1,0 +1,19 @@
+<!-- featured-books.component.html -->
+<section class="featured-books-section">
+    <div class="container">
+      <h2>Featured Books</h2>
+      <div class="featured-books-list">
+        <div class="scroll-container">
+          <div class="book-details" *ngFor="let item of firstTenBooks">
+            <div class="book-card">
+              <img [src]="item.bookImage" class="book-cover">
+              <div class="book-info">
+                <p>{{ item.bookTitle }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

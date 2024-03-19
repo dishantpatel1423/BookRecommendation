@@ -1,0 +1,17 @@
+<!-- recommendations.component.html -->
+<div >
+    <input type="text" [(ngModel)]="bookName" placeholder="Enter book name">
+    <button (click)="sendData()">Submit</button>
+</div>
+
+<div class="books-grid">
+    <div class="book-container" *ngFor="let item of data">
+      <img class="book-cover" [src]="item[2]" alt="">
+      <div class="book-details">
+        <h3>{{item[0]}}</h3>
+        <p class="author">Author:{{item[1]}}</p>
+        <!-- Add more details as needed -->
+      </div>
+    </div>
+  </div>
+  

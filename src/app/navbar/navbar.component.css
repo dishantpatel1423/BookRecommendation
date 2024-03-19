@@ -1,0 +1,13 @@
+/* navbar.component.css */
+.nav-link {
+    padding: 10px 20px; /* Add padding to create space around the text */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    margin-right: 10px; /* Add margin between each navigation item */
+}
+
+/* Add a CSS class to change background color to white */
+.nav-link.active {
+    background-color: #fff;
+    color: #000;
+}
